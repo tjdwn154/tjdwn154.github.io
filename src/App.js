@@ -3,13 +3,13 @@ import AnimatedRoutes from "./components/AnimatedRoutes";
 
 function App() {
   const personalDetails = {
-    name: "Michael Yeates",
-    location: "Loughborough, UK",
-    tagline: "I'm a Developer",
-    email: "michael-yeates@outlook.com",
-    availability: "Open for work",
+    name: "Moon Seong Ju",
+    location: "대한민국",
+    tagline: "Nice to meet you",
+    email: "msj07197@naver.com",
+    availability: "Javascript, React, Node.js, MongoDB",
     brand:
-      "My unique blend of technical expertise, creative thinking, and background in psychology allows me to approach each project with a deep understanding of the end user's perspective, resulting in highly effective user-centred digital products.",
+      "동명대학교 컴퓨터공학을 전공을 통해 Java, Javascirpt, DB등을 배웠습니다. 이후 React, Node.js도 습득하며 역량을 길렀으며 현재는 React의 역량을 더욱 키우기 위해 공부중입니다.",
   };
 
   return (

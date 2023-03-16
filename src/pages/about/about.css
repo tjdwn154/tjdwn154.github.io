@@ -35,11 +35,6 @@
   margin-bottom: 15px;
 }
 
-.contentContainer h5 {
-  color: var(--text-color);
-  font-size: 20px;
-  margin-bottom: 15px;
-}
 
 .contentDescription {
   color: var(--secondary-text-color);

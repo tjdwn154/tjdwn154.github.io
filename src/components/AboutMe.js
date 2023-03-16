@@ -1,9 +1,8 @@
-import aboutMeImg from "../images/aboutme.jpeg";
+import aboutMeImg from "../images/myimg.jpg";
 import { motion } from "framer-motion";
 import SocialIcons from "../components/SocialIcons";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
-import resume from "../pages/about/michael-yeates-resume.pdf";
 
 const AboutMe = ({ name, email, location, availability, brand }) => {
   const [ref, inView] = useInView({
@@ -17,18 +16,7 @@ const AboutMe = ({ name, email, location, availability, brand }) => {
     setDownloading(false);
   }, [downloading]);
 
-  const handleDownload = () => {
-    setDownloading(true);
-    const link = document.createElement("a");
-    link.href = resume;
-    link.download = "Michael-Yeates-Resume.pdf";
-    link.onload = () => {
-      link.remove();
-      setDownloading(false);
-    };
-    document.body.appendChild(link);
-    link.click();
-  };
+
 
   return (
     <div className="aboutContainer container">
@@ -50,8 +38,7 @@ const AboutMe = ({ name, email, location, availability, brand }) => {
           transition={{ duration: 0.4, ease: "easeInOut" }}
         >
           <div className="contentContainer">
-            <h4>Nice to meet you</h4>
-            <h5>Frontend Web Developer who creates amazing digital experiences!</h5>
+            <h4>더욱 성장하고 싶은 문성주입니다.</h4>
             <div className="contentDescription">
               <p>{brand}</p>
             </div>
@@ -59,7 +46,7 @@ const AboutMe = ({ name, email, location, availability, brand }) => {
               <div className="row">
                 <div className="col-12 col-md-6 info">
                   <span>Name:</span>
-                  <p>Michael Yeates</p>
+                  <p>Moon Seong Ju</p>
                 </div>
                 <div className="col-12 col-md-6 info">
                   <span>Email:</span>
@@ -80,9 +67,6 @@ const AboutMe = ({ name, email, location, availability, brand }) => {
               </div>
             </div>
             <div className="buttonContainer">
-              <button className="btn downloadCV" onClick={handleDownload} disabled={downloading}>
-                {downloading ? "Downloading..." : "Download Resume"}
-              </button>{" "}
               <SocialIcons />
             </div>
           </div>
